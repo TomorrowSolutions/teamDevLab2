@@ -1,0 +1,11 @@
+H:\projects\СSharp\teamDevLab2\bin\Debug\teamDevLab2.exe.config
+H:\projects\СSharp\teamDevLab2\bin\Debug\teamDevLab2.exe
+H:\projects\СSharp\teamDevLab2\bin\Debug\teamDevLab2.pdb
+H:\projects\СSharp\teamDevLab2\obj\Debug\teamDevLab2.csproj.AssemblyReference.cache
+H:\projects\СSharp\teamDevLab2\obj\Debug\teamDevLab2.csproj.SuggestedBindingRedirects.cache
+H:\projects\СSharp\teamDevLab2\obj\Debug\teamDevLab2.Form1.resources
+H:\projects\СSharp\teamDevLab2\obj\Debug\teamDevLab2.Properties.Resources.resources
+H:\projects\СSharp\teamDevLab2\obj\Debug\teamDevLab2.csproj.GenerateResource.cache
+H:\projects\СSharp\teamDevLab2\obj\Debug\teamDevLab2.csproj.CoreCompileInputs.cache
+H:\projects\СSharp\teamDevLab2\obj\Debug\teamDevLab2.exe
+H:\projects\СSharp\teamDevLab2\obj\Debug\teamDevLab2.pdb
