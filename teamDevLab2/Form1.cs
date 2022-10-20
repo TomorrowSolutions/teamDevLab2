@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft;
+using Newtonsoft.Json;
 
 namespace teamDevLab2
 {
@@ -45,6 +48,38 @@ namespace teamDevLab2
         {
             tovar.RemoveAt((Convert.ToInt32(textBox2.Text) - 1));
             textBox2.Text = "";
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var output = JsonConvert.SerializeObject(tovar, Formatting.Indented);
+            string path = Path.Combine(Environment.CurrentDirectory, "tovars.json");
+            using (var sr= new StreamWriter(path,true))
+            {
+                sr.Write(output);
+            }
+            MessageBox.Show("succ");
+        }
+        public class kvp
+        {
+            string key;
+            int n;
+            public kvp(string k, int num)
+            {
+                key= k;
+                n= num;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string json;
+            string path = Path.Combine(Environment.CurrentDirectory, "tovars.json");
+            using(var r= new StreamReader(path))
+            {
+                json = r.ReadToEnd();
+            }
+            tovar = JsonConvert.DeserializeObject<List<KeyValuePair<string, int>>>(json);
         }
     }
 }
