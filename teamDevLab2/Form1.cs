@@ -28,7 +28,7 @@ namespace teamDevLab2
                 MessageBox.Show("err");
                 return;
             }
-
+            textBox1.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,9 +36,15 @@ namespace teamDevLab2
             dataGridView1.Rows.Clear();
             foreach (var kvPair in tovar)
             {
-                string[] row = new string[] { kvPair.Key , kvPair.Value.ToString() };
+                string[] row = new string[] {(tovar.IndexOf(kvPair)+1).ToString(), kvPair.Key , kvPair.Value.ToString() };
                 dataGridView1.Rows.Add(row);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tovar.RemoveAt((Convert.ToInt32(textBox2.Text) - 1));
+            textBox2.Text = "";
         }
     }
 }
